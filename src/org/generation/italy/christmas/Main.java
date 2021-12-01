@@ -19,7 +19,7 @@ public class Main {
 		System.out.println("Qual'è il tuo indirizzo: ");
 		String i = scan.nextLine();
 		
-		
+		try {
 		while (continua) {
 			System.out.println("Aggiungi elemento alla lista dei desideri: ");
 			String a = scan.nextLine();
@@ -49,7 +49,11 @@ public class Main {
 			
 			
 			LetteraBabboNatale letteraBabboNatale = new LetteraBabboNatale(n, i, wishList);
-				System.out.println(letteraBabboNatale.invia());
+			
+				System.out.println(letteraBabboNatale.invia());}
+		catch(Exception e ) {
+			System.out.println("Hai fatto una lista troppo lunga (Max 5)");
+		}
 			
 
 		}
